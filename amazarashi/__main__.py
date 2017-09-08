@@ -2,29 +2,16 @@
 # coding: utf-8
 
 import os
-import sys
 import codecs
 
 from subprocess import Popen
 
+from amazarashi.util import check_peco_exist
 from amazarashi.tracks import get_tracks_data
 from amazarashi.lyrics import (
     get_lyric_link,
     get_lyrics_data
 )
-
-
-def check_peco_exist():
-
-    cmd = "type peco"
-    proc = Popen(cmd, stdin=-1, stdout=-1, stderr=-1, shell=True)
-    proc.wait()
-    exit_code = proc.returncode
-
-    if exit_code is not 0:
-        sys.stderr.write(
-            u"pecoがインストールされていません\n")
-        sys.exit(1)
 
 
 def choice_tracks(tracks):
