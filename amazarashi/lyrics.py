@@ -2,6 +2,7 @@
 # coding: utf-8
 
 from bs4 import BeautifulSoup
+from urlparse import urljoin
 from amazarashi.util import access
 
 
@@ -16,7 +17,10 @@ def get_lyric_link(track):
         track_title = child.text
 
         if track_title == track:
-            return child.get("href")
+            result = child.get("href")
+
+    base_link = "http://j-lyric.net/artist/a052b38/"
+    return urljoin(base_link, result)
 
 
 def get_lyrics_data(URL):

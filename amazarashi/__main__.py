@@ -5,7 +5,6 @@ import os
 import sys
 import codecs
 
-from urlparse import urljoin
 from subprocess import Popen
 
 from amazarashi.tracks import get_tracks_data
@@ -56,10 +55,7 @@ def main():
     track = choice_tracks(tracks_data)
     print u"曲：{0}".format(track)
 
-    link = get_lyric_link(track)
-    base_link = "http://j-lyric.net/artist/a052b38/"
-    track_link = urljoin(base_link, link)
-
+    track_link = get_lyric_link(track)
     print get_lyrics_data(track_link)
 
 if __name__ == '__main__':
