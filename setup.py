@@ -15,6 +15,7 @@ setup(
     author=__author__,
     version=__version__,
     license=license_msg,
+    packages=["amazarashi"],
     install_requires=[
         "requests==2.13.0",
         "chardet==2.1.1",
