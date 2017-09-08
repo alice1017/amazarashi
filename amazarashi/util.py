@@ -26,3 +26,5 @@ def check_peco_exist():
         sys.stderr.write(
             u"pecoがインストールされていません\n")
         sys.exit(1)
+
+    return True
