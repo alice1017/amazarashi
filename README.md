@@ -4,7 +4,15 @@ amazarashiの曲一覧を取得し、**peco**で曲を選択してその曲の�
 
 pecoがないと動きません。
 
-# CHANGELOG
+## INSTALL
+
+```
+$ git clone git@github.com:alice1017/amazarashi.git
+$ cd amazarashi
+$ python setup.py build install clean
+```
+
+## CHANGELOG
 
 ### v1.0.0
 
